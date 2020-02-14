@@ -1,0 +1,57 @@
+.license-logo-absolute {
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+}
+
+.bg-white-57 {
+    background: rgba(255, 255, 255, 0.57);
+}
+
+.object-fit-polyfill {
+    object-fit: cover;
+    object-position: center;
+    font-family: 'object-fit: cover; object-position: center;';
+}
+
+.vue-notification {
+    font-size: 14px !important;
+}
+
+.blue-rgba {
+  background: rgba(0, 48, 91, 0.76);
+}
+
+.shadow-title {
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-contact {
+  box-shadow: 0 0 10px #cee0e3;
+}
+
+.before-blue::before {
+  position: absolute;
+  content: '';
+  background: rgba(0, 48, 91, 0.76);
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: -1000px;
+}
+
+.after-blue::after {
+  position: absolute;
+  content: '';
+  background: rgba(0, 48, 91, 0.76);
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  right: -1000px;
+}
+
+

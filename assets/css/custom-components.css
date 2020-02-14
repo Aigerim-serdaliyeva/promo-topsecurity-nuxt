@@ -1,0 +1,63 @@
+.all-full {
+    @apply h-full w-full;
+}
+
+.main-menu-link {
+  @apply text-18px block text-center mx-auto text-white
+}
+
+.footer-phone {
+  @apply font-bold text-accent-red block text-28px
+}
+
+.section-title {
+  @apply font-bebas-neue uppercase text-center text-90px mb-20px
+}
+
+.button {
+  @apply text-white outline-none bg-accent-yellow uppercase border-2 border-solid border-accent-yellow rounded-40 font-medium py-8px px-30px text-24px
+}
+
+.input-div {
+  @apply mb-20px block w-full max-w-375px
+}
+
+.input {
+  @apply w-full outline-none relative font-light text-accent-gray bg-white rounded-40 border-2 border-solid border-#8a8a8a py-8px px-15px text-24px
+}
+
+.input-required {
+  @apply text-12px block text-accent-red pl-10px pt-10px
+}
+
+.work__title {
+  @apply font-bebas-neue uppercase font-bold text-white text-center leading-none text-50px max-w-190px w-full mt-40px mb-195px
+}
+
+.contact-link {
+  @apply flex items-center text-18px mb-15px
+}
+
+.contact-data {
+  @apply text-14px flex items-center justify-center mb-10px
+}
+
+@screen sm {
+  .main-menu-link {
+    @apply text-16px
+  }
+}
+
+@screen md {
+  .main-menu-link {
+    @apply text-16px
+  }
+}
+
+@screen xl {
+  .main-menu-link {
+    @apply text-18px
+  }
+}
+
+
