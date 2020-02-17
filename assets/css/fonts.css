@@ -65,34 +65,20 @@
        url('../fonts/montserrat/montserrat-v14-cyrillic_latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
-/* bebas-neue-regular - latin */
+@font-face {
+  font-family: 'BebasNeue';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/bebas-neue/BebasNeueBold.eot') format('eot'),
+      url('../fonts/bebas-neue/BebasNeueBold.ttf') format('ttf'),
+      url('../fonts/bebas-neue/BebasNeueBold.woff') format('woff');
+}
+
 @font-face {
   font-family: 'BebasNeue';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/bebas-neue/bebas-neue-v1-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Bebas Neue Regular'), local('BebasNeue-Regular'),
-       url('../fonts/bebas-neue/bebas-neue-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/bebas-neue/bebas-neue-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/bebas-neue/bebas-neue-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/bebas-neue/bebas-neue-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/bebas-neue/bebas-neue-v1-latin-regular.svg#BebasNeue') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: bold;
-  font-weight: 700;
-  src: url('../fonts/bebas-neue/BebasNeueBold.eot') format('eot'),
-      url('../fonts/bebas-neue/BebasNeueBold.ttf') format('ttf'),
-      url('../fonts/bebas-neue/BebasNeueBold.woff') format('woff'),
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
   src: url('../fonts/bebas-neue/BebasNeueRegular.eot') format('eot'),
       url('../fonts/bebas-neue/BebasNeueRegular.ttf') format('ttf'),
-      url('../fonts/bebas-neue/BebasNeueRegular.woff') format('woff'),
+      url('../fonts/bebas-neue/BebasNeueRegular.woff') format('woff');
 }

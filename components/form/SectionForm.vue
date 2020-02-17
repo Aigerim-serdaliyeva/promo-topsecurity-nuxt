@@ -7,7 +7,7 @@
             </div>
             <ValidationObserver ref="form">
                 <form
-                    class="flex justify-between items-start max-w-1070px w-full mx-auto"
+                    class="text-center lg:flex justify-between items-start max-w-1070px w-full mx-auto"
                     @submit.prevent="sendMail()"
                 >
                     <ValidationProvider
@@ -38,7 +38,10 @@
                         <span class="input-required">{{ errors[0] }}</span>
                     </ValidationProvider>
 
-                    <button type="submit" class="button">
+                    <button
+                        type="submit"
+                        class="button max-w-375px w-full lg:w-auto"
+                    >
                         ЗАКАЗАТЬ
                     </button>
                 </form>
@@ -102,6 +105,16 @@ export default {
     &:hover,
     &.active {
         background-color: transparent;
+        -webkit-box-shadow: 0 0 10px 0 #ffb800;
+        box-shadow: 0 0 10px 0 #ffb800;
+    }
+    &--service {
+        &:hover,
+        &.active {
+            background-color: #ffb800;
+            -webkit-box-shadow: 0 0 10px 0 #ffb800;
+            box-shadow: 0 0 10px 0 #ffb800;
+        }
     }
 }
 </style>

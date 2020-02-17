@@ -3,27 +3,27 @@
 }
 
 .main-menu-link {
-  @apply text-18px block text-center mx-auto text-white
+  @apply text-18px block text-center mx-auto text-accent-gray mb-20px
 }
 
 .footer-phone {
-  @apply font-bold text-accent-red block text-28px
+  @apply font-bold text-accent-red block text-24px
 }
 
 .section-title {
-  @apply font-bebas-neue uppercase text-center text-90px mb-20px
+  @apply font-bebas-neue font-bold leading-none uppercase text-center text-60px mb-20px
 }
 
 .button {
-  @apply text-white outline-none bg-accent-yellow uppercase border-2 border-solid border-accent-yellow rounded-40 font-medium py-8px px-30px text-24px
+  @apply text-white outline-none bg-accent-yellow uppercase border-2 border-solid border-accent-yellow rounded-40 font-medium py-8px px-15px text-16px
 }
 
 .input-div {
-  @apply mb-20px block w-full max-w-375px
+  @apply mb-20px block w-full max-w-375px mx-auto
 }
 
 .input {
-  @apply w-full outline-none relative font-light text-accent-gray bg-white rounded-40 border-2 border-solid border-#8a8a8a py-8px px-15px text-24px
+  @apply w-full outline-none relative font-light text-accent-gray bg-white rounded-40 border-2 border-solid border-#8a8a8a py-8px px-15px text-16px
 }
 
 .input-required {
@@ -31,7 +31,7 @@
 }
 
 .work__title {
-  @apply font-bebas-neue uppercase font-bold text-white text-center leading-none text-50px max-w-190px w-full mt-40px mb-195px
+  @apply font-bebas-neue font-bold uppercase font-bold text-white text-center leading-none text-50px max-w-180px w-full mt-40px mb-195px
 }
 
 .contact-link {
@@ -50,13 +50,29 @@
 
 @screen md {
   .main-menu-link {
-    @apply text-16px
+    @apply text-16px text-white mb-0
+  }
+  .button {
+    @apply py-8px px-30px text-24px
+  }
+}
+
+@screen lg {
+  .input {
+    @apply text-24px
+  }
+  .footer-phone {
+    @apply text-28px
   }
 }
 
 @screen xl {
   .main-menu-link {
     @apply text-18px
+  }
+
+  .section-title {
+    @apply text-90px mb-20px
   }
 }
 

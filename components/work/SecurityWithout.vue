@@ -27,6 +27,20 @@
                 />
                 <p class="text-white text-center text-16px">{{ work.text }}</p>
             </div>
+            <svg
+                width="720"
+                height="8"
+                viewBox="0 0 720 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M0 4H720"
+                    stroke="#EF3B39"
+                    stroke-width="7"
+                    stroke-dasharray="25 8"
+                />
+            </svg>
         </div>
     </div>
 </template>

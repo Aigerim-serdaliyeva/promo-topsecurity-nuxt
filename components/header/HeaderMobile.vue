@@ -1,6 +1,9 @@
 <template>
     <div>
-        <div class="header w-full fixed z-10 py-5px">
+        <div
+            class="header w-full fixed z-10 py-5px"
+            :class="{ active: mobileMenuState }"
+        >
             <div class="container flex items-center ">
                 <div @click="toggleMenu()">
                     <div class="burger" :class="{ checked: isChecked }">
@@ -15,7 +18,7 @@
                         ></div>
                     </div>
                 </div>
-                <nuxt-link to="/" class="text-center mx-auto block">
+                <nuxt-link to="/" class="logo text-center mx-auto block w-50px">
                     <img src="@/assets/img/logo.svg" class="mx-auto" />
                 </nuxt-link>
                 <a href="tel:5335">
@@ -24,18 +27,21 @@
             </div>
         </div>
         <div
-            class="header-mobile w-full h-screen bg-accent-yellow fixed flex items-center justify-center flex-col"
+            class="header-mobile w-full h-screen bg-white fixed flex items-center justify-center flex-col pb-25px px-15px pt-250px"
             :class="{ active: mobileMenuState }"
         >
-            <MainMenu @onSelectItem="closeMenu" />
+            <MainMenu class="flex-grow" @onSelectItem="closeMenu" />
+            <a href="" class="button mb-25px">Заказать звонок</a>
+            <HeaderSocial />
         </div>
     </div>
 </template>
 
 <script>
+import HeaderSocial from './HeaderSocial.vue';
 import MainMenu from './MainMenu.vue';
 export default {
-    components: { MainMenu },
+    components: { MainMenu, HeaderSocial },
     data() {
         return {
             mobileMenuState: false,
@@ -57,11 +63,20 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+    transition: 0.5s all ease-out;
     background: linear-gradient(
         180deg,
         #252525 0%,
         rgba(37, 37, 37, 0.42) 100%
     );
+    &.active {
+        padding: 50px 0;
+        border-radius: 0 0 100px 100px;
+        background-color: #32353c;
+        .logo {
+            width: 80px;
+        }
+    }
 }
 
 .header-mobile {

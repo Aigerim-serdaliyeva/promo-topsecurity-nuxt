@@ -2,24 +2,26 @@
     <div class="bg-accent-gray text-white py-80px">
         <div class="container">
             <SectionTitle class="text-white" section-title="НАШИ ЛИЦЕНЗИИ" />
-            <div class="relative flex items-start justify-between mx-auto">
+            <div class="relative lg:flex items-start justify-between mx-auto">
                 <img
                     src="@/assets/img/logo-white.png"
-                    class="absolute license-logo-absolute"
+                    class="mx-auto mb-30px lg:absolute lg:license-logo-absolute"
                 />
                 <div
                     v-for="(license, index) in licenses"
                     :key="license"
-                    class="text-center max-w-470px w-full"
+                    class="text-center max-w-470px w-full mx-auto mb-30px lg:mb-0"
                 >
                     <img
                         :src="
                             require(`../../assets/img/license-${index + 1}.jpg`)
                         "
-                        class="mx-auto mb-30px w-250px h-350px"
+                        class="mx-auto w-250px h-350px mb-20px lg:mb-30px"
                     />
-                    <div class="text-24px font-bold">{{ license.title }}</div>
-                    <p class="text-20px">{{ license.text }}</p>
+                    <div class="font-bold text-18px md:text-20px xl:text-24px">
+                        {{ license.title }}
+                    </div>
+                    <p class="text-16px xl:text-20px">{{ license.text }}</p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <ul
-        class="md:flex md:justify-between w-full mr-20px max-w-550px xl:max-w-690px"
+        class="md:flex md:justify-between w-full max-w-550px xl:max-w-690px md:mr-20px"
     >
         <li class="text-center" @click="select">
             <a class="main-menu-link" active-class="active">Как мы работаем </a>

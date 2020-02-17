@@ -1,19 +1,27 @@
 <template>
-    <div class="flex flex-wrap justify-between mt-40px">
+    <div class="lg:flex flex-wrap justify-between mt-40px">
         <div
             v-for="(advantage, index) in advantages"
             :key="advantage"
-            class="advantage relative text-white w-49 mb-10px"
+            class="advantage relative text-white max-w-550px -mx-15px sm:mx-auto lg:w-49 mb-10px"
         >
             <img
                 :src="require(`@/assets/img/advantage-${index + 1}.jpg`)"
                 class="w-full"
             />
-            <div class="absolute p-20px pb-10px bottom-22px z-10">
-                <h3 class="font-bebas-neue uppercase text-30px">
+            <div
+                class="absolute pb-10px top-55% z-10 px-10px sm:top-60% sm:p-20px"
+            >
+                <h3
+                    class="font-bebas-neue uppercase text-20px sm:text-24px xl:text-30px"
+                >
                     {{ advantage.title }}
                 </h3>
-                <p class="text-18px">{{ advantage.text }}</p>
+                <p
+                    class="leading-none text-15px sm:text-16px xl:leading-tight xl:text-18px"
+                >
+                    {{ advantage.text }}
+                </p>
             </div>
         </div>
     </div>
