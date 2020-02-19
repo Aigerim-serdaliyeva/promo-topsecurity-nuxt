@@ -53,6 +53,12 @@ export default {
             securityWithout: require('../../assets/json/security-without.json')
         };
     },
+    mounted() {
+        const t1 = anime.timeline({
+            easing: 'linear',
+            autoplay: false
+        });
+    },
     methods: {}
 };
 </script>
@@ -109,6 +115,16 @@ export default {
                     text-align: center;
                     margin: 0 0 40px;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work {
+        &__img {
+            &--yellow {
+                border: 5px solid #ffb800;
             }
         }
     }

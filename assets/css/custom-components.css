@@ -11,7 +11,7 @@
 }
 
 .section-title {
-  @apply font-bebas-neue font-bold leading-none uppercase text-center text-60px mb-20px
+  @apply font-bebas-neue font-bold leading-none uppercase text-center text-50px mb-40px
 }
 
 .button {
@@ -54,6 +54,9 @@
   }
   .button {
     @apply py-8px px-30px text-24px
+  }
+  .section-title {
+    @apply text-70px
   }
 }
 

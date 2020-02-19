@@ -1,5 +1,5 @@
 <template>
-    <div class="section-service bg-cover pt-70px pb-250px">
+    <div class="section-service bg-cover pt-70px pb-70px lg:pb-250px">
         <div class="container">
             <SectionTitle section-title="Наши услуги" />
             <p class="text-center mb-40px text-18px lg:text-25px">

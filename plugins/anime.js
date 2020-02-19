@@ -1,1 +1,1 @@
-import Anime from "animejs";
+import anime from "animejs";

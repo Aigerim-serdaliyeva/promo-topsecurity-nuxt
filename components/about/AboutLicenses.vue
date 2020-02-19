@@ -5,7 +5,7 @@
             <div class="relative lg:flex items-start justify-between mx-auto">
                 <img
                     src="@/assets/img/logo-white.png"
-                    class="mx-auto mb-30px lg:absolute lg:license-logo-absolute"
+                    class="license__logo mx-auto mb-30px lg:absolute"
                 />
                 <div
                     v-for="(license, index) in licenses"
@@ -50,3 +50,19 @@ export default {
     }
 };
 </script>
+
+<style lang="scss">
+.license__logo {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 991px) {
+    .license__logo {
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+</style>

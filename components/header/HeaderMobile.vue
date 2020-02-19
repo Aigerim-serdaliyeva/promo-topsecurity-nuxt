@@ -89,7 +89,7 @@ export default {
 
 .burger {
     width: 25px;
-    height: 25px;
+    height: 18px;
     position: relative;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
@@ -103,6 +103,9 @@ export default {
         margin-bottom: 3px;
         transform: rotate(0deg);
         transition: 0.25s ease-in-out;
+        &:last-child {
+            margin-bottom: 0;
+        }
         &--2 {
             top: 6px;
         }

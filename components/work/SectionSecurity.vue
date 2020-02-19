@@ -1,18 +1,22 @@
 <template>
-    <div class="-mt-130px">
+    <div class="py-70px px-15px lg:p-0 lg:-mt-130px">
         <SectionTitle section-title="Как это работает?" is-gray-title="true" />
-        <div class="flex justify-between">
+        <div class="justify-between hidden lg:flex">
             <SecurityWithout />
             <Security />
         </div>
+        <SecurityMobile class="lg:hidden" />
     </div>
 </template>
 
 <script>
 import SectionTitle from '../SectionTitle.vue';
+import SecurityMobile from './SecurityMobile.vue';
 import Security from './Security.vue';
 import SecurityWithout from './SecurityWithout.vue';
 export default {
-    components: { SectionTitle, SecurityWithout, Security }
+    components: { SectionTitle, SecurityWithout, Security, SecurityMobile }
 };
 </script>
+
+<style lang="scss"></style>
