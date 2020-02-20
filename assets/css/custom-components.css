@@ -3,7 +3,7 @@
 }
 
 .main-menu-link {
-  @apply text-18px block text-center mx-auto text-accent-gray mb-20px
+  @apply inline-block text-18px text-center mx-auto text-accent-gray mb-20px
 }
 
 .footer-phone {

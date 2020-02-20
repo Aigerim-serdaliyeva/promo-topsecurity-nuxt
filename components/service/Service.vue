@@ -26,7 +26,7 @@
                     <p
                         v-for="text in service.text"
                         :key="text"
-                        class="service__text text-left mb-10px sm:mb-15px text-14px lg:text-16px 2xl:text-18px"
+                        class="service__text text-left mb-10px sm:mb-15px text-14px lg:text-16px xl:text-18px"
                     >
                         {{ text }}
                     </p>

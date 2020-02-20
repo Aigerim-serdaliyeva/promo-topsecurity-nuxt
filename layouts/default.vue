@@ -3,7 +3,7 @@
         <HeaderMobile class="md:hidden" />
         <Header class="hidden md:block" />
         <nuxt />
-        <Footer />
+        <Footer id="contact" />
     </div>
 </template>
 

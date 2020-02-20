@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="header w-full fixed z-10 py-5px"
+            class="header w-full fixed z-30 py-5px"
             :class="{ active: mobileMenuState }"
         >
             <div class="container flex items-center ">
@@ -18,16 +18,20 @@
                         ></div>
                     </div>
                 </div>
-                <nuxt-link to="/" class="logo text-center mx-auto block w-50px">
-                    <img src="@/assets/img/logo.svg" class="mx-auto" />
-                </nuxt-link>
+
+                <a
+                    v-scroll-to="'#main'"
+                    href="#main"
+                    class="logo text-center mx-auto block w-50px"
+                    ><img src="@/assets/img/logo.svg" class="mx-auto" />
+                </a>
                 <a href="tel:5335">
                     <img src="../../assets/img/header-phone.svg" />
                 </a>
             </div>
         </div>
         <div
-            class="header-mobile w-full h-screen bg-white fixed flex items-center justify-center flex-col pb-25px px-15px pt-250px"
+            class="header-mobile w-full h-screen bg-white fixed flex items-center justify-center flex-col pb-25px px-15px pt-250px z-20"
             :class="{ active: mobileMenuState }"
         >
             <MainMenu class="flex-grow" @onSelectItem="closeMenu" />

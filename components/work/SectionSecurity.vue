@@ -1,5 +1,7 @@
 <template>
-    <div class="py-70px px-15px lg:p-0 lg:-mt-130px">
+    <div
+        class="section-security bg-no-repeat bg-cover py-70px px-15px lg:p-0 lg:-mt-130px"
+    >
         <SectionTitle section-title="Как это работает?" is-gray-title="true" />
         <div class="justify-between hidden lg:flex">
             <SecurityWithout />
@@ -19,4 +21,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@media screen and (max-width: 991px) {
+    .section-security {
+        background-image: url('../../assets/img/security-mobile/security-mobile-back.jpg');
+    }
+}
+</style>

@@ -1,11 +1,11 @@
 <template>
     <div class="">
-        <SectionMain />
-        <SectionService />
-        <SectionSecurity />
-        <SectionAdvantage />
-        <SectionAbout />
-        <SectionForm />
+        <SectionMain id="main" />
+        <SectionService id="service" />
+        <SectionSecurity id="work" />
+        <SectionAdvantage id="advantage" />
+        <SectionAbout id="about" />
+        <SectionForm id="form" />
     </div>
 </template>
 
@@ -27,3 +27,5 @@ export default {
     }
 };
 </script>
+
+<style lang="scss"></style>

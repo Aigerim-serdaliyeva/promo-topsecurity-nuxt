@@ -1,12 +1,12 @@
 const { promisify } = require('util');
 const path = require('path');
+const imagemin = require('imagemin');
+const imageminPngquant = require('imagemin-pngquant');
 const fse = require('fs-extra');
 const sharp = require('sharp');
 const mkdirp = require('mkdirp-promise');
 const async = require('async');
 const glob = require('glob');
-const imagemin = require('imagemin');
-const imageminPngquant = require('imagemin-pngquant');
 
 const isDefault = true;
 

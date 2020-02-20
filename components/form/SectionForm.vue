@@ -1,5 +1,5 @@
 <template>
-    <div class="section-form bg-252525 text-white py-80px">
+    <div id="form" class="section-form bg-252525 text-white py-80px">
         <div class="container">
             <SectionTitle section-title="Нужна консультация?" />
             <div class="text-center mb-20px text-20px">

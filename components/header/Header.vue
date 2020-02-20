@@ -4,9 +4,9 @@
     >
         <div class="container">
             <div class="flex items-center">
-                <nuxt-link to="/" class="flex-grow"
+                <a v-scroll-to="'#main'" href="#main" class="flex-grow"
                     ><img src="../../assets/img/logo.svg"
-                /></nuxt-link>
+                /></a>
                 <MainMenu />
                 <div>
                     <HeaderPhone

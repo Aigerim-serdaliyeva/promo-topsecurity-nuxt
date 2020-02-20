@@ -36,7 +36,8 @@ export default {
         { src: '~plugins/vue-notification.client.js' },
         { src: '~plugins/validate.js' },
         { src: '~plugins/app-global-mixin.client.js' },
-        { src: '~plugins/anime.js' }
+        { src: '~plugins/anime.js' },
+        { src: '~plugins/vue-scrollto.js' }
     ],
     /*
      ** Nuxt.js dev-modules

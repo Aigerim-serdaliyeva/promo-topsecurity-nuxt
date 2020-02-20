@@ -1,11 +1,11 @@
 <template>
     <div
-        class="section-main h-screen bg-cover text-white leading-tight text-20px pt-145px pb-100px lg:text-24px lg:pt-200px lg:pb-120px 2xl:pt-250px 2xl:pb-165px 2xl:text-30px"
+        class="section-main h-screen bg-cover text-white leading-tight text-20px pt-145px pb-100px lg:text-24px lg:pt-200px lg:pb-120px xl:pt-280px xl:pb-165px xl:text-30px"
     >
         <div class="container">
             <div class="max-w-670px w-full text-center md:text-left">
                 <h2
-                    class="font-bebas-neue font-bold leading-none tracking-tight uppercase text-50px lg:text-70px 2xl:text-80px"
+                    class="font-bebas-neue font-bold leading-none tracking-tight uppercase text-50px lg:text-70px xl:text-80px"
                 >
                     Охранная сигнализация для дома и офиса
                 </h2>
@@ -19,7 +19,10 @@
                     Надежная защита имущества <br />
                     за 5 500 тг в месяц
                 </div>
-                <a href="" class="button lg:text-18px 2xl:text-24px"
+                <a
+                    v-scroll-to="'#form'"
+                    href="#form"
+                    class="button lg:text-18px xl:text-24px"
                     >ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
                 </a>
             </div>
