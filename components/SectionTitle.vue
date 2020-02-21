@@ -11,10 +11,6 @@ export default {
         isGrayTitle: {
             type: Boolean,
             default: false
-        },
-        isWhiteTitle: {
-            type: Boolean,
-            default: false
         }
     },
     computed: {
@@ -22,11 +18,6 @@ export default {
             return this.isGrayTitle
                 ? 'section-title text-252525'
                 : 'section-title text-accent-red';
-        },
-        whiteTitle() {
-            return this.isWhiteTitle
-                ? 'section-title text-252525'
-                : 'section-title text-white';
         }
     }
 };

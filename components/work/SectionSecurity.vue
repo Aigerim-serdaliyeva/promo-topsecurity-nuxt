@@ -7,7 +7,7 @@
             <SecurityWithout />
             <Security />
         </div>
-        <SecurityMobile class="lg:hidden" />
+        <SecurityMobile class="lg:hidden max-w-375px w-full mx-auto" />
     </div>
 </template>
 

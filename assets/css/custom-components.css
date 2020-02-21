@@ -64,6 +64,9 @@
   .input {
     @apply text-24px
   }
+  .input-div {
+    @apply mx-0
+  }
   .footer-phone {
     @apply text-28px
   }
@@ -75,7 +78,7 @@
   }
 
   .section-title {
-    @apply text-90px mb-20px
+    @apply text-80px mb-20px
   }
 }
 

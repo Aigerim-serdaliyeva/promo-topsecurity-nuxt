@@ -14,9 +14,9 @@
         >
             <div
                 v-for="(work, index) in securityWithout"
-                :id="work.id"
                 :key="work"
-                class="work max-w-210px w-full mb-40px mx-20px"
+                class="work max-w-210px w-full mb-40px mx-20px opacity-0"
+                :class="work.id"
             >
                 <img
                     :src="
@@ -47,19 +47,40 @@
 
 <script>
 import anime from 'animejs';
+import { mapGetters } from 'vuex';
 export default {
     data() {
         return {
             securityWithout: require('../../assets/json/security-without.json')
         };
     },
-    mounted() {
-        const t1 = anime.timeline({
-            easing: 'linear',
-            autoplay: false
-        });
-    },
-    methods: {}
+    methods: {
+        ...mapGetters({
+            workAnimationStatus: 'workAnimationStatus'
+        }),
+        animateWork() {
+            if (!this.workAnimationStatus) {
+                this.firstWorkAnimation();
+                console.log('dsds');
+            } else {
+                this.normalWorkAnimation();
+            }
+        },
+        firstWorkAnimation() {
+            const _this = this;
+            const imageDuration = 1000;
+            this.$anime.timeline().add({
+                targets: '.without-security-1',
+                opacity: {
+                    value: 1,
+                    duration: 1000
+                },
+                scale: [1, 1.1, 1],
+                duration: imageDuration
+            });
+        },
+        normalWorkAnimation() {}
+    }
 };
 </script>
 

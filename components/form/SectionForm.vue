@@ -1,7 +1,11 @@
 <template>
     <div id="form" class="section-form bg-252525 text-white py-80px">
         <div class="container">
-            <SectionTitle section-title="Нужна консультация?" />
+            <SectionTitle
+                class="text-white"
+                section-title="Нужна консультация?"
+                is-gray-title="false"
+            />
             <div class="text-center mb-20px text-20px">
                 Заполните поля, и мы Вам перезвоним!
             </div>

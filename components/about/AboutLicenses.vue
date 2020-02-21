@@ -1,7 +1,11 @@
 <template>
     <div class="bg-accent-gray text-white py-80px">
         <div class="container">
-            <SectionTitle class="text-white" section-title="НАШИ ЛИЦЕНЗИИ" />
+            <SectionTitle
+                class="text-white"
+                section-title="НАШИ ЛИЦЕНЗИИ"
+                is-gray-title="false"
+            />
             <div class="relative lg:flex items-start justify-between mx-auto">
                 <img
                     src="@/assets/img/logo-white.png"
@@ -9,7 +13,7 @@
                 />
                 <div
                     v-for="(license, index) in licenses"
-                    :key="license"
+                    :key="`license-${index}`"
                     class="text-center max-w-470px w-full mx-auto mb-30px lg:mb-0"
                 >
                     <img
@@ -58,7 +62,7 @@ export default {
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
     .license__logo {
         top: 0;
         left: 0;

@@ -17,10 +17,10 @@
                         require(`../../assets/img/security-mobile/security-mobile-${index +
                             1}.png`)
                     "
-                    class="work__img work__img--yellow mx-auto max-w-100px w-full"
+                    class="wow zoomIn work__img work__img--yellow mx-auto max-w-100px w-full"
                 />
                 <div
-                    class="ml-20px"
+                    class="ml-20px wow slideInLeft"
                     :class="{
                         'text-right mr-20px ml-0': work.arrow === 'arrow-left'
                     }"
@@ -38,14 +38,14 @@
                 :src="
                     require(`../../assets/img/security-mobile/arrow-right.png`)
                 "
-                class="mx-auto"
+                class="mx-auto wow zoomIn"
             />
             <img
                 v-else-if="work.arrow === 'arrow-left'"
                 :src="
                     require(`../../assets/img/security-mobile/arrow-left.png`)
                 "
-                class="mx-auto"
+                class="mx-auto wow zoomIn"
             />
         </div>
     </div>
