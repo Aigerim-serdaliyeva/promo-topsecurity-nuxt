@@ -7,16 +7,16 @@
                 беспроводной сигнализации и смартфона, в квартире, доме или
                 офисе
             </p>
-            <Service />
+            <Services />
         </div>
     </div>
 </template>
 
 <script>
 import SectionTitle from '../SectionTitle.vue';
-import Service from './Service.vue';
+import Services from './Services.vue';
 export default {
-    components: { SectionTitle, Service }
+    components: { SectionTitle, Services }
 };
 </script>
 

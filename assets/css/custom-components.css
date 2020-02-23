@@ -18,6 +18,10 @@
   @apply text-white outline-none bg-accent-yellow uppercase border-2 border-solid border-accent-yellow rounded-40 font-medium py-8px px-15px text-16px
 }
 
+.button:focus {
+    @apply outline-none
+}
+
 .input-div {
   @apply mb-20px block w-full max-w-375px mx-auto
 }
