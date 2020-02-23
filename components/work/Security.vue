@@ -10,22 +10,24 @@
             ОБЪЕКТ ПОД ОХРАНОЙ TOP SECURITY KZ
         </h2>
         <div
-            class="work__blog w-8/12 flex flex-wrap justify-center mx-auto hidden"
+            class="work__blog w-9/12 xl:w-8/12 flex flex-wrap justify-center mx-auto hidden"
         >
             <div
                 v-for="(work, index) in security"
                 :id="work.id"
                 :key="work"
-                class="max-w-210px w-full mb-40px mx-20px"
+                class="work max-w-170px w-full mb-40px  lg:mx-5px xl:mx-20px xl:max-w-210px"
             >
                 <img
                     :src="
                         require(`../../assets/img/security/security-${index +
                             1}.jpg`)
                     "
-                    class="work__img work__img--yellow mx-auto mb-15px"
+                    class="work__img work__img--yellow mx-auto mb-10px xl:mb-15px max-w-110px xl:max-w-none"
                 />
-                <p class="text-white text-center text-16px">{{ work.text }}</p>
+                <p class="text-white text-center text-12px xl:text-16px">
+                    {{ work.text }}
+                </p>
             </div>
         </div>
     </div>

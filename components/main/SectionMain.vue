@@ -1,6 +1,6 @@
 <template>
     <div
-        class="section-main h-screen bg-cover text-white leading-tight text-20px pt-145px pb-100px lg:text-24px lg:pt-200px lg:pb-120px xl:pt-280px xl:pb-165px xl:text-30px"
+        class="section-main h-screen bg-cover text-white leading-tight text-20px pt-145px pb-100px sm:h-auto lg:text-24px lg:pt-200px lg:pb-120px xl:pt-280px xl:pb-165px xl:text-30px"
     >
         <div class="container">
             <div class="max-w-670px w-full text-center md:text-left">
