@@ -5,16 +5,16 @@
                 section-title="Наши преимущества"
                 is-gray-title="true"
             />
-            <Advantage />
+            <Advantages />
         </div>
     </div>
 </template>
 
 <script>
 import SectionTitle from '../SectionTitle.vue';
-import Advantage from './Advantage.vue';
+import Advantages from './Advantages.vue';
 export default {
-    components: { SectionTitle, Advantage }
+    components: { SectionTitle, Advantages }
 };
 </script>
 
