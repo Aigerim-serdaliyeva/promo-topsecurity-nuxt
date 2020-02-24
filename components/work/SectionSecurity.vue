@@ -1,6 +1,6 @@
 <template>
     <div
-        class="section-security bg-no-repeat bg-cover py-70px px-15px lg:p-0 lg:-mt-130px"
+        class="section-security bg-no-repeat bg-cover py-70px px-15px lg:p-0 lg:-mt-100px"
     >
         <SectionTitle section-title="Как это работает?" is-gray-title="true" />
         <div class="justify-between hidden lg:flex">

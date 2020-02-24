@@ -6,10 +6,10 @@
             `object--${direction}`
         ]"
         :style="{ background: objectBackground }"
-        @mouseover="showobjectSide(direction)"
+        @mouseover="showObjectSide(direction)"
     >
         <img :src="figurePath" class="object__figure -mr-7px ml-auto" />
-        <h2 class="object__title ml-auto mr-20px">
+        <h2 class="object__title">
             {{ title }}
         </h2>
         <div
@@ -18,29 +18,29 @@
             <div
                 v-for="(item, index) in items"
                 :key="`item-${index}`"
-                :style="{ 'border-color': color }"
                 class="item max-w-170px w-full mb-40px lg:mx-5px xl:mx-20px xl:max-w-210px"
             >
                 <img
                     :src="item.imgPath"
                     class="item__img mx-auto mb-10px xl:mb-15px max-w-110px xl:max-w-none"
+                    :style="{ 'border-color': color }"
                 />
                 <p class="text-white text-center text-12px xl:text-16px">
                     {{ item.text }}
                 </p>
             </div>
             <svg
-                width="720"
+                width="660"
                 height="8"
-                viewBox="0 0 720 8"
+                viewBox="0 0 660 8"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path
                     d="M0 4H720"
                     :stroke="color"
-                    stroke-width="7"
-                    stroke-dasharray="25 8"
+                    stroke-width="5"
+                    stroke-dasharray="20 8"
                 />
             </svg>
         </div>
@@ -49,6 +49,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
+import VueAnime from 'vue-animejs';
 export default {
     props: {
         direction: {
@@ -71,7 +72,7 @@ export default {
         },
         color: {
             type: String,
-            default: '#EF3B39'
+            default: 'accent-red'
         },
         objectBackground: {
             type: String,
@@ -86,8 +87,12 @@ export default {
     },
     methods: {
         ...mapMutations({
-            showobjectSide: 'showobjectSide'
+            showObjectSide: 'showObjectSide'
         })
+    },
+    mounted() {
+        const targets = this.$el;
+        this.$anime.timeline();
     }
 };
 </script>
@@ -114,7 +119,18 @@ export default {
     &--left {
         .object {
             &__title {
-                text-align: right;
+                margin: 0 20px 0 auto;
+            }
+        }
+    }
+
+    &--right {
+        .object {
+            &__title {
+                margin: 0 auto 0 20px;
+            }
+            &__figure {
+                margin: 0 auto 0 0;
             }
         }
     }
@@ -133,6 +149,20 @@ export default {
                 max-width: none;
                 text-align: center;
                 margin: 0 0 40px;
+            }
+            &--right {
+                .object {
+                    &__title {
+                        color: #ffb800 !important;
+                    }
+                }
+            }
+            &--left {
+                .object {
+                    &__title {
+                        color: #ef3b39 !important;
+                    }
+                }
             }
         }
     }

@@ -3,7 +3,7 @@
         title="ОБЪЕКТ ПОД ОХРАНОЙ TOP SECURITY KZ"
         :figure-path="require('../../assets/img/security-figure-2.png')"
         direction="right"
-        color="#ffb800"
+        color="#FFB800"
         :items="securityItems"
         object-background="linear-gradient(
                 270deg,

@@ -34,7 +34,7 @@
   @apply text-12px block text-accent-red pl-10px pt-10px
 }
 
-.work__title {
+.object__title {
   @apply font-bebas-neue font-bold uppercase font-bold text-white text-center leading-none text-50px max-w-180px w-full mt-40px mb-195px
 }
 

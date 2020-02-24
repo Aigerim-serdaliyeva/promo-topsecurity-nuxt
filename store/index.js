@@ -1,24 +1,18 @@
 export const state = () => ({
-    workAnimation: true,
-    workOpenedSide: ''
+    objectAnimation: true,
+    objectOpenedSide: ''
 });
 
 export const getters = {
-    workAnimationStatus(state) {
-        return state.workAnimation;
-    },
-    workShownSide(state) {
-        console.log(state.workOpenedSide);
-        return state.workOpenedSide;
+    objectShownSide(state) {
+        console.log(state.objectOpenedSide);
+        return state.objectOpenedSide;
     }
 };
 
 export const mutations = {
-    completeWorkAnimation(state) {
-        state.workAnimation = true;
-    },
-    showWorkSide(state, payload) {
-        state.workOpenedSide = payload;
+    showObjectSide(state, payload) {
+        state.objectOpenedSide = payload;
         console.log(payload, state);
     }
 };
