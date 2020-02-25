@@ -9,7 +9,7 @@
         @mouseover="showObjectSide(direction)"
     >
         <img :src="figurePath" class="object__figure -mr-7px ml-auto" />
-        <h2 class="object__title">
+        <h2 class="object__title" :style="{ color }">
             {{ title }}
         </h2>
         <div
@@ -135,6 +135,14 @@ export default {
         }
     }
 
+    &:not(.hover) {
+        .object {
+            &__title {
+                color: #fff !important;
+            }
+        }
+    }
+
     &.hover {
         width: 90%;
         padding: 20px 0;
@@ -149,20 +157,6 @@ export default {
                 max-width: none;
                 text-align: center;
                 margin: 0 0 40px;
-            }
-            &--right {
-                .object {
-                    &__title {
-                        color: #ffb800 !important;
-                    }
-                }
-            }
-            &--left {
-                .object {
-                    &__title {
-                        color: #ef3b39 !important;
-                    }
-                }
             }
         }
     }
