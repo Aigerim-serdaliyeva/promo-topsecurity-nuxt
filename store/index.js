@@ -5,7 +5,6 @@ export const state = () => ({
 
 export const getters = {
     objectShownSide(state) {
-        console.log(state.objectOpenedSide);
         return state.objectOpenedSide;
     }
 };
@@ -13,6 +12,5 @@ export const getters = {
 export const mutations = {
     showObjectSide(state, payload) {
         state.objectOpenedSide = payload;
-        console.log(payload, state);
     }
 };

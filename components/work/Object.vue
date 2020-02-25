@@ -6,7 +6,7 @@
             `object--${direction}`
         ]"
         :style="{ backgroundImage: objectBackground }"
-        @mouseover="showObjectSide(direction)"
+        @mouseenter="onHover"
     >
         <img :src="figurePath" class="object__figure -mr-7px ml-auto" />
         <h2 class="object__title" :style="{ color }">
@@ -17,8 +17,9 @@
         >
             <div
                 v-for="(item, index) in items"
-                :key="`item-${index}`"
+                :key="`item-${index + 1}`"
                 class="item max-w-170px w-full mb-40px lg:mx-5px xl:mx-20px xl:max-w-210px"
+                :class="`item-${index + 1}`"
             >
                 <img
                     :src="item.imgPath"
@@ -39,6 +40,7 @@
                 <path
                     d="M0 4H720"
                     :stroke="color"
+                    stroke-linecap="round"
                     stroke-width="5"
                     stroke-dasharray="20 8"
                 />
@@ -49,7 +51,6 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-import VueAnime from 'vue-animejs';
 export default {
     props: {
         direction: {
@@ -80,24 +81,59 @@ export default {
                 'linear-gradient(90deg, rgba(239, 59, 57, 0.6) 0%, rgba(239, 59, 57, 0) 100%)'
         }
     },
+    data() {
+        return {
+            itemAnime: this.$anime.timeline({
+                easing: 'linear',
+                loop: false,
+                autoplay: false
+            })
+        };
+    },
     computed: {
         ...mapGetters({
             objectShownSide: 'objectShownSide'
         })
     },
     mounted() {
-        const targets = this.$el;
-        this.$anime.timeline();
+        this.items.forEach((item, index) => {
+            this.itemAnime.add({
+                targets: `.item-${index + 1}`,
+                keyframes: [
+                    {
+                        opacity: 1,
+                        duration: 200
+                    },
+                    {
+                        scale: 1.1
+                    },
+                    {
+                        scale: 1
+                    }
+                ],
+                duration: 400
+            });
+        });
     },
     methods: {
         ...mapMutations({
             showObjectSide: 'showObjectSide'
-        })
+        }),
+        onHover() {
+            this.showObjectSide(this.direction);
+            this.itemAnime.play();
+        }
     }
 };
 </script>
 
 <style lang="scss">
+svg {
+    path {
+        animation: dash-right 1.5s linear infinite;
+    }
+}
+
 .item {
     &:last-child {
         margin-bottom: 0;
