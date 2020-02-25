@@ -55,8 +55,8 @@
 </template>
 
 <script>
-import SectionTitle from '../SectionTitle.vue';
 import { ValidationObserver, ValidationProvider } from 'vee-validate';
+import SectionTitle from '../SectionTitle.vue';
 
 export default {
     components: { SectionTitle, ValidationObserver, ValidationProvider },

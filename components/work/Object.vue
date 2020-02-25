@@ -5,7 +5,7 @@
             { hover: objectShownSide === direction },
             `object--${direction}`
         ]"
-        :style="{ background: objectBackground }"
+        :style="{ backgroundImage: objectBackground }"
         @mouseover="showObjectSide(direction)"
     >
         <img :src="figurePath" class="object__figure -mr-7px ml-auto" />
@@ -85,14 +85,14 @@ export default {
             objectShownSide: 'objectShownSide'
         })
     },
+    mounted() {
+        const targets = this.$el;
+        this.$anime.timeline();
+    },
     methods: {
         ...mapMutations({
             showObjectSide: 'showObjectSide'
         })
-    },
-    mounted() {
-        const targets = this.$el;
-        this.$anime.timeline();
     }
 };
 </script>
