@@ -35,9 +35,9 @@
                 class="object__line object__line--1 absolute z-0 overflow-hidden"
             >
                 <svg
-                    width="500"
+                    width="150"
                     height="8"
-                    viewBox="0 0 500 8"
+                    viewBox="0 0 150 8"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
@@ -49,6 +49,7 @@
                     />
                 </svg>
             </div>
+            <!-- <ObjectLine class="object__line--1" /> -->
 
             <div
                 class="object__line object__line--3 absolute z-0 overflow-hidden"
@@ -73,9 +74,9 @@
                 class="object__line object__line--4 absolute z-0 overflow-hidden"
             >
                 <svg
-                    width="500"
+                    width="150"
                     height="8"
-                    viewBox="0 0 500 8"
+                    viewBox="0 0 150 8"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
@@ -88,8 +89,8 @@
                 </svg>
             </div>
 
-            <div
-                v-if="`object--${direction}` === 'object--left'"
+            <!-- <div
+                v-if="direction === left"
                 class="object__line object__line--6 absolute z-0 overflow-hidden"
             >
                 <svg
@@ -106,14 +107,16 @@
                         stroke-dasharray="20 10"
                     />
                 </svg>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
+import ObjectLine from './ObjectLine';
 export default {
+    components: { ObjectLine },
     props: {
         direction: {
             type: String,
@@ -145,6 +148,7 @@ export default {
     },
     data() {
         return {
+            isPlayed: false,
             itemAnime: this.$anime.timeline({
                 easing: 'linear',
                 loop: false,
@@ -159,20 +163,20 @@ export default {
     },
     mounted() {
         this.itemAnime
-            .add(this.getObjectAnime('.item-1'))
-            .add(this.getSvgAnime('.object__line--1'))
-            .add(this.getObjectAnime('.item-2'))
-            .add(this.getSvgAnime('.object__line--2'))
-            .add(this.getObjectAnime('.item-3'))
-            .add({
-                targets: '.object__line--3',
-                duration: 1000
-            })
-            .add(this.getObjectAnime('.item-6'))
-            .add(this.getSvgAnime('.object__line--4'))
-            .add(this.getObjectAnime('.item-5'))
-            .add(this.getObjectAnime('.item-4'))
-            .add(this.getObjectAnime('.item-7'));
+            .add(this.getObjectAnime(this.$el.querySelector('.item-1')))
+            // .add(this.getSvgAnime(this.$el.querySelector('.object__line--1')))
+            .add(this.getObjectAnime(this.$el.querySelector('.item-2')))
+            // .add(this.getSvgAnime(this.$el.querySelector('.object__line--2')))
+            .add(this.getObjectAnime(this.$el.querySelector('.item-3')))
+            // .add({
+            //     targets: this.$el.querySelector('.object__line--3'),
+            //     duration: 1000
+            // })
+            .add(this.getObjectAnime(this.$el.querySelector('.item-6')))
+            // .add(this.getSvgAnime(this.$el.querySelector('.object__line--4')))
+            .add(this.getObjectAnime(this.$el.querySelector('.item-5')))
+            .add(this.getObjectAnime(this.$el.querySelector('.item-4')))
+            .add(this.getObjectAnime(this.$el.querySelector('.item-7')));
     },
     methods: {
         ...mapMutations({
@@ -180,14 +184,17 @@ export default {
         }),
         onHover() {
             this.showObjectSide(this.direction);
-            this.itemAnime.play();
+            if (!this.isPlayed) {
+                this.itemAnime.play();
+                this.isPlayed = true;
+            }
         },
         getObjectAnime(targets) {
             return {
                 targets,
                 keyframes: [
                     {
-                        opacity: 1,
+                        opacity: 0,
                         duration: 200
                     },
                     {
@@ -203,7 +210,7 @@ export default {
         getSvgAnime(targets) {
             return {
                 targets,
-                width: [0, 600],
+                width: [0, 150],
                 duration: 400
             };
         }
@@ -308,6 +315,7 @@ svg {
 
     &__content {
         height: 770px;
+        align-content: flex-start;
     }
 
     &__line {
