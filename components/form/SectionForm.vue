@@ -2,9 +2,8 @@
     <div id="form" class="section-form bg-252525 text-white py-80px">
         <div class="container">
             <SectionTitle
-                class="text-white"
+                class="section-title"
                 section-title="Нужна консультация?"
-                is-gray-title="false"
             />
             <div class="text-center mb-20px text-20px">
                 Заполните поля, и мы Вам перезвоним!
@@ -55,8 +54,8 @@
 </template>
 
 <script>
-import { ValidationObserver, ValidationProvider } from 'vee-validate';
 import SectionTitle from '../SectionTitle.vue';
+import { ValidationObserver, ValidationProvider } from 'vee-validate';
 
 export default {
     components: { SectionTitle, ValidationObserver, ValidationProvider },
@@ -81,7 +80,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.section-title {
+    color: #fff !important;
+}
+
 .section-form {
     border-top: 5px solid #ffb800;
     border-bottom: 5px solid #ef3b39;

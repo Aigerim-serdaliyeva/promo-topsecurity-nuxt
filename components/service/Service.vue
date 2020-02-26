@@ -40,8 +40,7 @@ export default {
             default: ''
         },
         texts: {
-            type: String,
-            default: ''
+            type: Array
         },
         imgPath: {
             type: String,

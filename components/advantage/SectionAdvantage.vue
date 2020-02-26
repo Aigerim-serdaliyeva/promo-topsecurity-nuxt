@@ -3,7 +3,7 @@
         <div class="container">
             <SectionTitle
                 section-title="Наши преимущества"
-                is-gray-title="true"
+                :is-gray-title="true"
             />
             <Advantages />
         </div>

@@ -1,11 +1,7 @@
 <template>
     <div class="bg-accent-gray text-white py-80px">
         <div class="container">
-            <SectionTitle
-                class="text-white"
-                section-title="НАШИ ЛИЦЕНЗИИ"
-                is-gray-title="false"
-            />
+            <SectionTitle class="section-title" section-title="НАШИ ЛИЦЕНЗИИ" />
             <div class="relative lg:flex items-start justify-between mx-auto">
                 <img
                     src="@/assets/img/logo-white.png"
@@ -55,7 +51,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.section-title {
+    color: #fff !important;
+}
+
 .license__logo {
     top: 35%;
     left: 50%;

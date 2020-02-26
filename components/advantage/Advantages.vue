@@ -2,7 +2,7 @@
     <div class="lg:flex flex-wrap justify-between mt-40px">
         <Advantage
             v-for="(advantage, index) in advantages"
-            :key="advantage"
+            :key="`advantage-${index + 1}`"
             :img-path="require(`@/assets/img/advantage-${index + 1}.jpg`)"
             :title="advantage.title"
             :text="advantage.text"

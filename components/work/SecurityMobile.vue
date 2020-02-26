@@ -3,7 +3,7 @@
         <div
             v-for="(work, index) in security"
             :id="work.id"
-            :key="work"
+            :key="`work-${index + 1}`"
             class="work"
         >
             <div
